@@ -1,0 +1,19 @@
+.icon-flutter {
+  animation: flutter 2s infinite alternate ease-in-out;
+}
+
+@keyframes flutter {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+.buttonSpace {
+  margin-left: 10px; border: none;
+    background: #1bf2bf;
+    padding: 4px 23px 4px;
+    border-radius: 9px;
+}

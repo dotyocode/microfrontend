@@ -1,0 +1,53 @@
+## Star Wars - Micro Front End
+
+-- Esse Projeto tem intuito de poder mostrar como é a forma de integrar sistema com micro front end usando Angular e React.
+
+## Como Inicializar?
+
+--- React
+- Para Inicializar, você deve ir no projeto "Project-react", entrar na pasta src e fazer o "npm install"
+- Assim que ele estiver concluido você deve rodar "npm start:standalone", para você está inicializando os serviços do react.
+Pronto assim estamos rodando o projeto do react.
+
+--- Angular
+- Para Inicializar, você deve ir no projeto "Project-angular", entrar na pasta src e fazer o "npm install"
+- Assim que ele estiver concluido você deve rodar "npm start", para você está inicializando os serviços do angular.
+Pronto assim estamos rodando o projeto do Angular.
+
+ele está configurado na porta 9000
+http://localhost:9000/
+
+--Root
+- para podermos incializar o nosso microfront end de vez, devemos rodar o nosso projeto root, ele está na pasta root,
+dê o npm install e dps npm start, assim estaremos rodando 100% o nosso projeto
+
+
+
+## o que contem no react?
+
+- Podemos observar que temos um menu e um footer, porem nos clique do menu, quando clicamos disparamos o evento que aciona a lib pubsub-js que mandamos a mensagem de comunicação passando dados dos eventos para o Angular que recebe e faz o subscribe da resposta assim ficamos escutando tudo em tempo real para que possamos trazer a dinamica entre o nosso microfront end
+
+
+## o que contem no Angular?
+Tempos a aplicação que recebe a Star Wars API, assim usamos para podermos pegar os dados dinamicamente usando a lib pubsub-js para comunicarmos entre os componentes e o projeto do react, então assim conseguimos ter enfase em nosso microfront end.
+
+
+## Outros
+
+Podemos fazer modificações em nosso aplicativo, entrando no index.ejs, e onde está
+
+  <% if (isLocal) { %>
+    <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css",
+        "@mfe/root-config": "//localhost:9000/mfe-root-config.js",
+        "@angular/project": "//localhost:9001/main.js",
+        "@react/project": "//localhost:8080/mfe-react-project.js"
+      }
+    }
+  </script>
+
+Podemos fazer outras alterações, podemos importar novos pacotes e outros frameworks.
+Lembrando, dependendo do tipo de lib que você usa, você tem que instalar aqui no nosso projeto root para surtir efeito.

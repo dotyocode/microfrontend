@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.menu_list li a {
+  font-family: 'Montserrat', sans-serif; /* Aplicando a fonte Montserrat */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu {
+  margin-bottom: 20px;
+}
+
+.menu_list {
+  list-style: none;
+  /* padding: 0; */
+  display: flex;
+  color: white
+}
+
+.menu_list li {
+  margin-left: 40px;
+}
+.menu_list li {
+  margin-right: 80px; /* Tente ajustar ou remover isso */
+}
+
+
+.menu_list li p {
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 14px;
+  text-align: center; /* Adicione esta linha para alinhar o texto */
+}
+
+
+.logo img {
+  max-width: 100px;
+}
+
+.logo {
+  margin-top: 20px;
+}
+

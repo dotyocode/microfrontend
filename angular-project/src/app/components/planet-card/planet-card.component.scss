@@ -1,0 +1,218 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
+.container {
+  display: flex;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 65%;
+  border-radius: 8px;
+  max-width: 1000px; /* Define o tamanho máximo da div */
+}
+
+.card {
+  width: 290px;
+  height: 220px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem linha quando necessário */
+  gap: 10px; /* Define o espaçamento entre os parágrafos */
+}
+
+
+/* ... (seu CSS existente) */
+
+.paragraphs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.p-group {
+  display: flex;
+  text-align: initial;
+  flex-wrap: nowrap;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 10px; /* Adiciona espaçamento vertical entre os grupos */
+}
+
+.p-group .p-container {
+  width: 250px; /* Tamanho fixo para a div que envolve o parágrafo */
+}
+
+.p-group p {
+  color: white;
+  font-size: 12px;
+  margin: 0; /* Redefine a margem padrão para todos os parágrafos */
+}
+
+.p-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.loading {
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // height: 100vh; /* Para centralizar verticalmente na altura da viewport */
+}
+
+.bi {
+  width: 22px;
+  height: 22px;
+  margin-top: 9px;
+  color: white;
+  animation: tremble 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite, blink 2s ease-in-out infinite;
+}
+
+
+@keyframes tremble {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(-2px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.circle {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255);
+  border-top-color: transparent;
+  margin-top: -3.7%;
+  border-left-color: transparent;
+  border-radius: 50%;
+  animation: rotate 2s linear infinite, fill 4s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fill {
+  0%, 0% {
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+  25%, 15% {
+    border-top-color: rgba(255, 255, 255, 0.2);
+    border-left-color: transparent;
+  }
+  50%, 50% {
+    border-top-color: rgba(255, 255, 255, 0.2);
+    border-left-color: rgba(255, 255, 255, 0.2);
+  }
+  75%, 100% {
+    border-top-color: transparent;
+    border-left-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.loading-text {
+  color: white;
+  font-weight: 100;
+  margin-top: 20px;
+  animation: fade 2s infinite;
+  opacity: 0;
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; /* Isso garante que o elemento ocupe toda a altura da tela */
+}
+
+
+.form-container {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.form-container.hidden {
+  opacity: 0;
+  pointer-events: none; /* Impede que interações sejam feitas com o elemento oculto */
+}
+
+.error {
+  color: white;
+  background: #d32020;
+  padding: 10px;
+  width: 200px;
+  border-radius: 6px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px); /* Start position below */
+  animation: slideUp 0.5s forwards; /* Apply the animation */
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End position at the top */
+  }
+}
+
+.containerError {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+}
+
+
+

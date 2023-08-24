@@ -1,0 +1,16 @@
+<div [formGroup]="nameFormGroup">
+  <ng-container *ngIf="inputType.name === 'input-normal'">
+    <input
+      [readonly]="readonly"
+      [formControlName]="name"
+      [placeholder]="placeHolder"
+      [type]="tipo"
+      [id]="id"
+      class="form-control inputWidth custom-input"
+      [class.active]="isInputActive"
+      [class.has-error]="isInvalid ? getValidTouched(name) : ''"
+      (blur)="onInputBlur()"
+      (focus)="onInputFocus()"
+    />
+  </ng-container>
+</div>
